@@ -1,4 +1,5 @@
 let lastScroll = 0;
+const start = window.innerHeight * 0.8;
 const header = document.querySelector('.header');
 const logo = document.querySelector('.top__logo');
 
@@ -8,16 +9,23 @@ const headerStep2 = () => header.classList.contains('step2');
 const logoHide = () => logo.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
-  if (scrollPosition() > lastScroll && !headerStep1()) {
+  if (start - scrollPosition() <= 0) header.style.top = '0px'
+  // else if(start - lastScroll >= start) header.style.marginTop = start + '0px'
+  else header.style.top = start - scrollPosition() + 'px';
+  console.log(start - scrollPosition())
+
+
+  if (start - scrollPosition() < lastScroll && !headerStep1()) {
     header.classList.add('step1');
-  } else if (scrollPosition() <= 35 && headerStep1()) {
+    logo.classList.add('step1');
+  } else if (start - scrollPosition() >= lastScroll + 35 && headerStep1()) {
     header.classList.remove('step1');
-  } else if (scrollPosition() > 140 && !headerStep2()) {
+  } else if (scrollPosition() > start + 140 && !headerStep2()) {
     header.classList.add('step2');
     logo.classList.add('hide');
-  } else if (scrollPosition() <= 140 && headerStep2()) {
+  } else if (scrollPosition() <= start + 140 && headerStep2()) {
     header.classList.remove('step2');
     logo.classList.remove('hide');
   }
-  lastScroll = scrollPosition();
+  lastScroll = scrollPosition() - window.innerHeight * 0.8;
 });

@@ -30,10 +30,19 @@
 	<link rel="preload" as="script"
 		href="https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/js/hippo.1eb183b96542.js"
 		onload="performance.mark('atl:hippo_preloaded');">
-
+	<script src="js/playerjs.js"></script>
 </head>
 
 <body>
+	<div class="video">
+		<div class="video__container">
+			<div id="player"></div>
+			<script>
+				var player = new Playerjs({ id: "player", file: "video/tested_ad.mp4", autoplay: 1 });
+			</script>
+		</div>
+	</div>
+
 	<div class="hidden">
 		<?xml version="1.0" encoding="UTF-8"?>
 		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg

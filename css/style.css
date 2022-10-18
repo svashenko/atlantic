@@ -396,10 +396,9 @@ body {
 
 body {
   font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
-  background-color: #fbfafa;
   color: #000;
   position: relative;
-  padding-top: 256px; }
+  margin-top: 80vh; }
 
 .hidden {
   display: none; }
@@ -425,16 +424,14 @@ body {
 .header {
   position: fixed;
   background: #fff;
-  z-index: 9999999;
-  top: 0;
+  z-index: 999999;
+  top: 80vh;
   left: 0;
   right: 0;
   background-color: #fbfafa;
   font-size: 14px;
   font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
   border-bottom: 1px solid #9b9b9b;
-  display: inline-block;
-  transition: all 0.15s;
   padding-bottom: 32px; }
   .header__container {
     max-width: 1280px;
@@ -507,7 +504,6 @@ body {
     align-items: center;
     padding: 16px 0 20px;
     transform: translateX(-33.5%);
-    z-index: 999999999;
     cursor: pointer;
     background: #fff; }
     .header__logo-sm {
@@ -530,7 +526,8 @@ body {
     cursor: pointer; }
 
 .step1.header {
-  padding-bottom: 64px; }
+  padding-bottom: 64px;
+  position: fixed; }
 
 .step1 .header__right {
   margin-top: 0; }
@@ -558,6 +555,7 @@ body {
   z-index: 0; }
 
 .top__logo {
+  transform: translateY(100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -583,8 +581,22 @@ body {
     margin-top: 16px;
     z-index: 9999999; }
 
+.video {
+  height: 80vh;
+  background: #000;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0; }
+  .video__container {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto; }
+
 .bottom {
-  margin: 24px 0; }
+  margin: 24px 0;
+  background-color: #fbfafa; }
   .bottom__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -604,6 +616,7 @@ body {
       border-bottom: 1px solid #dbdbdb; }
 
 .mid {
+  background-color: #fbfafa;
   margin-bottom: 20px; }
   .mid__wrapper {
     display: flex;
@@ -848,6 +861,8 @@ body {
     line-height: 1.4; }
 
 .top {
+  padding-top: 256px;
+  background-color: #fbfafa;
   margin-bottom: 64px; }
   .top__last {
     display: grid;
