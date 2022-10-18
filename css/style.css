@@ -1,0 +1,1034 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+menu, ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+@font-face {
+  font-display: swap;
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 600;
+  src: local("Adobe Garamond Pro SemiboldItalic"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-SemiboldItalic.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-SemiboldItalic.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Adobe Garamond Pro BoldItalic"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-BoldItalic.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-BoldItalic.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Adobe Garamond Pro Regular"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Regular.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Regular.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Adobe Garamond Pro Semibold"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Semibold.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Semibold.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Adobe Garamond Pro Bold"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Bold.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Bold.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Adobe Garamond Pro Italic"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Italic.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/garamond/AGaramondPro-Italic.woff") format("woff"); }
+@font-face {
+  font-display: swap;
+  font-family: "Atlantic Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://www.theatlantic.com/packages/fonts/atlantic/Atlantic-Serif.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/atlantic/Atlantic-Serif.woff") format("woff"); }
+@font-face {
+  font-display: swap;
+  font-family: "Druk";
+  font-style: normal;
+  font-weight: 800;
+  /* stylelint-disable indentation */
+  src: url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.73c680315608.woff2") format("woff2"), url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.de0a29cd8676.woff") format("woff");
+  /* stylelint-enable indentation */ }
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 400;
+  /* stylelint-disable indentation */
+  src: url("https://www.theatlantic.com/packages/fonts/graphik/Graphik-Regular-Web.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/graphik/Graphik-Regular-Web.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 600;
+  /* stylelint-disable indentation */
+  src: url("https://www.theatlantic.com/packages/fonts/graphik/Graphik-Semibold-Web.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/graphik/Graphik-Semibold-Web.woff") format("woff");
+  /* stylelint-enable indentation */ }
+@font-face {
+  font-display: swap;
+  font-family: "Lyon Text";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  /* stylelint-disable indentation */
+  src: url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Regular.952052f78892.woff2") format("woff2"), url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Regular.840c78933255.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+@font-face {
+  font-display: swap;
+  font-family: "Lyon Text";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 400;
+  /* stylelint-disable indentation */
+  src: url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Regular-Italic.1f3d1b40255e.woff2") format("woff2"), url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Regular-Italic.ce9636f76967.woff") format("woff");
+  /* stylelint-enable indentation */ }
+@font-face {
+  font-display: swap;
+  font-family: "Noe Text";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 900;
+  /* stylelint-disable indentation */
+  src: url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/noe/Noe-Text-Black.b05d72fe331d.woff2") format("woff2"), url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/noe/Noe-Text-Black.2dcd42be9f8e.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+@font-face {
+  font-display: swap;
+  font-family: "Noe Text";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 900;
+  /* stylelint-disable indentation */
+  src: url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/noe/Noe-Text-Black-Italic.3e111503a215.woff2") format("woff2"), url("https://cdn.theatlantic.com/tng/static/frontend/dist/theatlantic/fonts/noe/Noe-Text-Black-Italic.0086b1b36dfc.woff") format("woff");
+  /* stylelint-enable indentation */ }
+@font-face {
+  font-display: swap;
+  font-family: "Logic Monospace";
+  font-style: normal;
+  font-weight: 400;
+  /* stylelint-disable indentation */
+  src: url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-Medium.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-Medium.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+@font-face {
+  font-display: swap;
+  font-family: "Logic Monospace";
+  font-style: normal;
+  font-weight: 300;
+  /* stylelint-disable indentation */
+  src: url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-Regular.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-Regular.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+@font-face {
+  font-display: swap;
+  font-family: "Logic Monospace";
+  font-style: italic;
+  font-weight: 300;
+  /* stylelint-disable indentation */
+  src: url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-RegularItalic.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-RegularItalic.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+@font-face {
+  font-display: swap;
+  font-family: "Logic Monospace";
+  font-style: italic;
+  font-weight: 400;
+  /* stylelint-disable indentation */
+  src: url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-MediumItalic.woff2") format("woff2"), url("https://www.theatlantic.com/packages/fonts/logic/LogicMonospace-MediumItalic.woff") format("woff");
+  /* stylelint-enable indentation */ }
+
+.footer {
+  font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  font-size: 14px;
+  padding: 32px 32px 48px;
+  background-color: #000;
+  color: #fff;
+  fill: #fff; }
+  .footer__container {
+    margin: 0 auto;
+    max-width: 1036px; }
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 16px;
+    padding-bottom: 32px; }
+  .footer__links-list:last-child {
+    width: 96px;
+    display: flex;
+    flex-wrap: wrap; }
+    .footer__links-list:last-child li:nth-child(3n + 3) {
+      margin: 0 24px 24px 24px; }
+    .footer__links-list:last-child li:first-child {
+      width: 100%; }
+    .footer__links-list:last-child svg {
+      height: 16px;
+      width: 16px; }
+  .footer__link {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
+    .footer__link:first-child {
+      font-size: 12px;
+      cursor: auto;
+      margin-bottom: 16px;
+      padding: 0;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase; }
+    .footer__link:not(:first-child) {
+      margin-bottom: 16px;
+      line-height: 1.25;
+      transition: all 150ms;
+      cursor: pointer; }
+      .footer__link:not(:first-child):hover {
+        color: #5e6a74;
+        fill: #5e6a74; }
+    .footer__link:last-child {
+      margin-bottom: 0; }
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer__bottom ul {
+      display: flex;
+      align-items: center;
+      justify-content: start; }
+    .footer__bottom .footer__link {
+      line-height: 1.125;
+      font-size: 10px;
+      letter-spacing: 0.25px;
+      cursor: pointer;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      text-transform: capitalize;
+      margin-bottom: 8px;
+      font-weight: 400;
+      transition: all 150ms; }
+      .footer__bottom .footer__link:hover {
+        color: #5e6a74;
+        fill: #5e6a74; }
+      .footer__bottom .footer__link:not(:last-child) {
+        border-right: 1px solid #fff;
+        margin-right: 8px;
+        padding-right: 8px; }
+  .footer__copyright {
+    line-height: 1.125;
+    font-size: 10px;
+    letter-spacing: 0.25px; }
+  .footer__logo svg {
+    width: 136px;
+    cursor: pointer;
+    transition: all 150ms; }
+    .footer__logo svg:hover {
+      color: #5e6a74;
+      fill: #5e6a74; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  background-color: #fbfafa;
+  position: relative; }
+
+.hidden {
+  display: none; }
+
+.container {
+  max-width: 1280px;
+  width: calc(100% - 48px);
+  margin: 0 auto; }
+
+.title {
+  font-family: "Atlantic Serif", "Atlantic", "Bodoni", Georgia, serif;
+  line-height: 1.125;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2.25px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  transition: all 300ms; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  background-color: #fbfafa;
+  color: #000;
+  position: relative;
+  padding-top: 256px; }
+
+.hidden {
+  display: none; }
+
+.container {
+  max-width: 1280px;
+  width: calc(100% - 48px);
+  margin: 0 auto; }
+
+.title {
+  font-family: "Atlantic Serif", "Atlantic", "Bodoni", Georgia, serif;
+  line-height: 1.125;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2.25px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  transition: all 300ms;
+  cursor: pointer; }
+
+.header {
+  position: fixed;
+  background: #fff;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fbfafa;
+  font-size: 14px;
+  font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  border-bottom: 1px solid #9b9b9b;
+  display: inline-block;
+  transition: all 0.15s;
+  padding-bottom: 32px; }
+  .header__container {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    height: 62px; }
+  .header__right {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    transition: all 0.15s; }
+  .header__left-logo svg {
+    width: 26px;
+    height: 40px;
+    fill: #e7131a;
+    cursor: pointer;
+    margin-right: 32px;
+    display: none; }
+  .header__burger {
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    margin-right: 16px; }
+    .header__burger::before {
+      content: "";
+      display: block;
+      top: -7px;
+      width: 20px;
+      height: 1px;
+      background-color: #000;
+      border-radius: 4px;
+      cursor: pointer;
+      position: absolute; }
+    .header__burger::after {
+      content: "";
+      display: block;
+      bottom: -7px;
+      width: 20px;
+      height: 1px;
+      background-color: #000;
+      border-radius: 4px;
+      cursor: pointer;
+      position: absolute; }
+  .header__search svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 0 16px; }
+  .header__popular, .header__latest {
+    margin: 0 16px;
+    cursor: pointer; }
+  .header__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0 20px;
+    transform: translateX(-33.5%);
+    z-index: 999999999;
+    cursor: pointer;
+    background: #fff; }
+    .header__logo-sm {
+      width: 175px;
+      height: 27px;
+      opacity: 0; }
+  .header__subsc {
+    color: #fff;
+    background-color: #e7131a;
+    border: 1px solid #d0021b;
+    border-radius: 4px;
+    padding: 10px 18px 11px;
+    cursor: pointer;
+    transition: all 300ms;
+    margin-left: 32px; }
+    .header__subsc:hover {
+      background: #b80f15; }
+  .header__sign {
+    text-transform: capitalize;
+    cursor: pointer; }
+
+.step1.header {
+  padding-bottom: 64px; }
+
+.step1 .header__right {
+  margin-top: 0; }
+
+.step1 .header__left {
+  transform: translateY(-100%); }
+  .step1 .header__left-logo svg {
+    display: none; }
+
+.step1 .header__logo-sm {
+  opacity: 0; }
+
+.step2.header {
+  padding-bottom: 0; }
+
+.step2 .header__left {
+  transform: translateY(0); }
+  .step2 .header__left-logo svg {
+    display: block; }
+
+.step2 .header__logo-sm {
+  opacity: 1; }
+
+.hide.top__logo {
+  z-index: 0; }
+
+.top__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999;
+  background: #fbfafa; }
+  .top__logo-bg {
+    width: 89px;
+    height: 135px;
+    fill: #e7131a;
+    position: relative;
+    cursor: pointer;
+    z-index: 9999999; }
+  .top__logo-sm {
+    width: 175px;
+    height: 27px;
+    cursor: pointer;
+    margin-top: 16px;
+    z-index: 9999999; }
+
+.bottom {
+  margin: 24px 0; }
+  .bottom__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 32px;
+         column-gap: 32px; }
+  .bottom__item {
+    grid-column: span 1;
+    margin-bottom: 64px; }
+  .bottom__line {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    cursor: pointer;
+    font-size: 18px; }
+    .bottom__line:not(:last-child) {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #dbdbdb; }
+
+.mid {
+  margin-bottom: 20px; }
+  .mid__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 32px; }
+  .mid__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #000; }
+    .mid__title h2 {
+      font-family: "Atlantic Serif", "Atlantic", "Bodoni", Georgia, serif;
+      line-height: 1.125;
+      font-size: 32px;
+      font-weight: 400;
+      padding-bottom: 16px;
+      letter-spacing: 2.25px;
+      text-transform: uppercase;
+      transition: all 300ms; }
+    .mid__title span {
+      color: #767676;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      margin-left: auto;
+      text-transform: uppercase;
+      font-weight: 600; }
+  .mid__left {
+    width: 33%; }
+  .mid__right {
+    width: 33%; }
+    .mid__right-btn {
+      transition: all 300ms;
+      border: 1px solid #000;
+      background: #000;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.25;
+      padding: 8px 16px 10px;
+      margin-top: 16px;
+      font-size: 14px;
+      text-align: center;
+      text-transform: capitalize;
+      cursor: pointer; }
+      .mid__right-btn:hover {
+        background-color: #39434b;
+        border-color: #39434b; }
+
+.latest {
+  width: 66%; }
+  .latest__item {
+    display: flex;
+    justify-content: start;
+    align-items: start; }
+    .latest__item:not(:nth-child(2)) {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #dbdbdb; }
+  .latest__img {
+    width: 200px;
+    height: 133px;
+    margin-right: 16px;
+    cursor: pointer; }
+  .latest__title {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+    cursor: pointer;
+    margin-bottom: 16px; }
+  .latest__author {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    cursor: pointer; }
+  .latest__date {
+    color: #5e6a74;
+    letter-spacing: 1px;
+    line-height: 1.125;
+    font-weight: 600;
+    font-size: 11px; }
+  .latest__event {
+    color: #e7131a;
+    display: block;
+    font-family: "Logic Monospace", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.writer {
+  margin-bottom: 64px; }
+  .writer__item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 16px; }
+  .writer__img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 16px; }
+  .writer__name {
+    line-height: 1.25;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: block; }
+  .writer__article {
+    color: #5e6a74;
+    line-height: 1.4;
+    font-size: 14px;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    width: auto;
+    word-wrap: normal;
+    cursor: pointer; }
+
+.podcast {
+  margin-bottom: 64px; }
+  .podcast__item {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start; }
+    .podcast__item:not(:nth-child(2)) {
+      border-top: 1px solid #dbdbdb;
+      margin-top: 16px;
+      padding-top: 16px; }
+  .podcast__img {
+    width: 150px;
+    height: 150px;
+    margin-right: 16px;
+    cursor: pointer; }
+  .podcast__title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block; }
+  .podcast__descr {
+    font-weight: 400;
+    line-height: 1.25;
+    font-size: 16px;
+    cursor: pointer; }
+
+.crossword {
+  margin-bottom: 64px; }
+  .crossword__info {
+    display: flex;
+    margin-bottom: 16px; }
+  .crossword__text {
+    font-size: 16px;
+    line-height: 1.25; }
+  .crossword__img {
+    width: 80px;
+    height: 80px;
+    margin-left: 16px; }
+  .crossword span {
+    line-height: 1.125;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: #999;
+    text-transform: uppercase; }
+
+.popular {
+  margin-bottom: 64px; }
+  .popular__item {
+    margin-bottom: 16px;
+    padding: 0 0 12px 0; }
+    .popular__item:not(:last-child) {
+      border-bottom: 1px solid #d3dce6; }
+  .popular__num {
+    color: #e7131a;
+    font-variant-numeric: lining-nums;
+    font-weight: 700;
+    margin: 0 4px 0 0;
+    word-wrap: normal; }
+  .popular__text {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    font-size: 18px;
+    margin-bottom: 12px;
+    cursor: pointer; }
+  .popular__author {
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1.125;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    white-space: normal;
+    cursor: pointer;
+    font-weight: 600; }
+
+.newsletters {
+  margin-bottom: 64px; }
+  .newsletters input {
+    margin: 0 0 12px;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #c0ccda;
+    border-radius: 4px;
+    color: #000;
+    line-height: 1.25;
+    padding: 8px 16px 10px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+    .newsletters input:focus {
+      border-color: #31c6cc;
+      box-shadow: 0 0 0 3px rgba(49, 198, 204, 0.25);
+      outline: 0; }
+  .newsletters__info {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 16px; }
+  .newsletters #checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 12px; }
+  .newsletters label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 16px; }
+  .newsletters p {
+    font-size: 14px;
+    line-height: 1.4; }
+
+.top {
+  margin-bottom: 64px; }
+  .top__last {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 16px;
+    padding-top: 32px;
+    position: relative;
+    overflow: hidden; }
+  .top__first {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 32px; }
+  .top__left {
+    width: 31%; }
+    .top__left .item-bg:first-child {
+      padding-bottom: 16px; }
+      .top__left .item-bg:first-child::before {
+        display: none; }
+    .top__left .item-bg::after {
+      display: none; }
+    .top__left .item-bg::before {
+      right: 0;
+      left: 0; }
+  .top__mid {
+    width: 70%; }
+  .top__right {
+    width: 31%; }
+    .top__right .item-sm {
+      margin-bottom: 32px; }
+      .top__right .item-sm:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid #dbdbdb;
+        bottom: -16px;
+        left: 0;
+        right: 0;
+        top: auto; }
+
+.item-bg {
+  position: relative;
+  margin-bottom: 16px; }
+  .item-bg:not(:nth-child(4))::after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #dbdbdb;
+    bottom: 0;
+    left: auto;
+    right: -16px;
+    top: 0; }
+  .item-bg::before {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #dbdbdb;
+    bottom: auto;
+    left: -16px;
+    right: -16px;
+    top: -16px; }
+  .item-bg__img {
+    width: 100%;
+    cursor: pointer; }
+  .item-bg__credit {
+    padding: 4px 0;
+    color: #5e6a74;
+    font-family: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+    font-size: 8px;
+    line-height: 1;
+    max-width: 100%;
+    overflow: hidden;
+    right: 0;
+    text-align: right;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap; }
+  .item-bg__title {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    cursor: pointer; }
+  .item-bg__text {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    font-size: 18px;
+    color: #5e6a74;
+    margin-bottom: 20px; }
+  .item-bg__author {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1.125;
+    text-transform: uppercase;
+    cursor: pointer; }
+  .item-bg__red {
+    color: #e7131a;
+    display: block;
+    font-family: "Logic Monospace", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    cursor: pointer; }
+
+.last-item-bg {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-column: span 2; }
+  .last-item-bg__right {
+    order: 1;
+    flex: 0 1 50%; }
+  .last-item-bg__info {
+    width: 50%;
+    padding-right: 32px; }
+
+.item-sm {
+  display: flex;
+  position: relative;
+  justify-content: space-between; }
+  .item-sm__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    letter-spacing: -0.25px;
+    cursor: pointer;
+    margin-bottom: 16px; }
+  .item-sm__img {
+    width: 80px;
+    height: 80px;
+    margin-left: 16px;
+    cursor: pointer; }
+
+.last-item-sm {
+  padding-bottom: 16px;
+  margin-bottom: 16px; }
+  .last-item-sm:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #dbdbdb;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto; }
+
+.item-mine {
+  text-align: center;
+  position: relative; }
+  .item-mine::after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #dbdbdb;
+    bottom: 0;
+    left: auto;
+    right: -16px;
+    top: 0; }
+  .item-mine::before {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #dbdbdb;
+    bottom: 0;
+    left: auto;
+    left: -16px;
+    top: 0; }
+  .item-mine__img {
+    width: 100%;
+    cursor: pointer; }
+  .item-mine__title {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    font-size: 42px;
+    margin: 0 0 12px;
+    padding: 0 32px;
+    cursor: pointer; }
+  .item-mine__text {
+    font-family: AGaramondPro, "Adobe Garamond Pro", Garamond, Georgia, serif;
+    line-height: 1.125;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 0 32px; }
