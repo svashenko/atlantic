@@ -18,8 +18,10 @@ window.addEventListener('scroll', () => {
   if (start - scrollPosition() < lastScroll && !headerStep1()) {
     header.classList.add('step1');
     logo.classList.add('step1');
+    document.querySelector('video').pause()
   } else if (start - scrollPosition() >= lastScroll + 35 && headerStep1()) {
     header.classList.remove('step1');
+    document.querySelector('video').play()
   } else if (scrollPosition() > start + 140 && !headerStep2()) {
     header.classList.add('step2');
     logo.classList.add('hide');
@@ -27,5 +29,13 @@ window.addEventListener('scroll', () => {
     header.classList.remove('step2');
     logo.classList.remove('hide');
   }
+
   lastScroll = scrollPosition() - window.innerHeight * 0.8;
 });
+
+function scrollToTop() {
+  document.querySelector('.top').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
